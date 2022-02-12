@@ -75,7 +75,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(10vw, 60px, 15vw);
+  font-size: clamp(5vw, 60px, 10vw);
   background-color: var(--bg_color);
 
 }
