@@ -23,14 +23,14 @@ let multiply = () => {
 }
 
 let divide = () => {
-  let result = Number(x.value) / Number(y.value);
-  if ((Number.isInteger(result) == false) && (result > 1)) {
+  let originalResult = (Number(x.value) / Number(y.value)).toFixed(5);
+  if ((Number.isInteger(originalResult) == false) && (originalResult > 1)) {
     let remainder = Number(x.value) % Number(y.value)
     let noOfTimes = (Number(x.value) - remainder) / Number(y.value)
-    result = `${noOfTimes} r ${remainder}`;
+    let result = `${noOfTimes} r ${remainder} | ${originalResult}`;
     displayResult(result);
   } else {
-    displayResult(result);
+    displayResult(originalResult);
   }
 }
 
@@ -42,6 +42,7 @@ document.querySelector('.divide').addEventListener('click', divide);
 
 
 //DISPLAY
+
 let displayResult = (result) => {
   display.textContent = result;
 }
